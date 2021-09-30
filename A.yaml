@@ -15,7 +15,6 @@ pr:
     - master
     - testA
     - testB
-    - test
   paths:
     include:
     - test-css/testA
