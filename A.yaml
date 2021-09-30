@@ -7,25 +7,19 @@ trigger:
 - none
 
 pool: Default
-
-resources:
-  repositories:
-  - repository: test-css
-    type: git
-    #ref: devfeature
-    pr:
-      branches:
-        include:
-        - testA
-        - testB
-        - master
-    paths:
-      include:
-        - /TestA
-        - /TestB     
-      exclude:
-        - /
-        - /TestC
+pr:
+  branches:
+    include:
+    - testA
+    - testB
+    - master
+  paths:
+    include:
+    - test-css/TestA
+    - test-css/TestB     
+    exclude:
+    - test-css/*
+    - test-css/TestC
 
 stages:
 - stage: Build
