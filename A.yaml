@@ -12,9 +12,9 @@ pool: Default
 pr:
   branches:
     include:
-    - master
-    - testA
-    - testB
+    - main
+    - test1
+    - test2
   paths:
     include:
     - test-css/testA
