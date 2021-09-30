@@ -17,11 +17,10 @@ pr:
     - test2
   paths:
     include:
-    - test-css/testA
-    - test-css/testB
+    - testA
+    - testB
     exclude:
-    - test-css/*
-    - test-css/testC
+    - testC
 
 stages:
 - stage: Build
