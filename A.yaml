@@ -8,28 +8,25 @@ trigger:
 
 pool: Default
 
-resources:
-  repositories:
-  - repository: test-css
-    type: git
-    #ref: devfeature
-    pr:
-      branches:
-        include:
-        - testA
-        - testB
-        - master
-    paths:
-      include:
-        - /TestA
-        - /TestB     
-      exclude:
-        - /
-        - /TestC
+
+pr:
+  branches:
+    include:
+    - master
+    - testA
+    - testB
+    - test
+  paths:
+    include:
+    - test-css/testA
+    - test-css/testB
+    exclude:
+    - test-css/*
+    - test-css/testC
 
 stages:
 - stage: Build
   jobs:
   - job: BuildJob
     steps:
-    - script: echo Building!
+    - script: echo Building from A!
