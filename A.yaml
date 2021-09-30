@@ -10,7 +10,7 @@ pool: Default
 
 resources:
   repositories:
-  - repository: self
+  - repository: test-css
     type: git
     #ref: devfeature
     pr:
