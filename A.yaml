@@ -1,0 +1,35 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- none
+
+pool: Default
+
+resources:
+  repositories:
+  - repository: self
+    type: git
+    #ref: devfeature
+    pr:
+      branches:
+        include:
+        - testA
+        - testB
+        - master
+    paths:
+      include:
+        - /TestA
+        - /TestB     
+      exclude:
+        - /
+        - /TestC
+
+stages:
+- stage: Build
+  jobs:
+  - job: BuildJob
+    steps:
+    - script: echo Building!
