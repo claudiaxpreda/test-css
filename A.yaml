@@ -15,7 +15,6 @@ pr:
     - master
     - testA
     - testB
-
   paths:
     include:
     - test-css/testA
@@ -30,3 +29,4 @@ stages:
   - job: BuildJob
     steps:
     - script: echo Building from A!
+
