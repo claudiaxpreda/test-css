@@ -6,12 +6,12 @@
 
 pool: Default
 
+pr: none
+
 trigger:
   branches:
     include:
     - main
-    - test1
-    - test2
   paths:
     include:
     - testA
