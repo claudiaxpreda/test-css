@@ -24,4 +24,4 @@ stages:
   jobs:
   - job: BuildJob
     steps:
-    - script: echo Building from A!
+    - script: echo Building from A test!
