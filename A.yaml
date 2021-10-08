@@ -6,8 +6,7 @@
 
 pool: Default
 
-trigger: none
-pr:
+trigger:
   branches:
     include:
     - main
