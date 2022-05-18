@@ -1,4 +1,2 @@
-trigger: none
-
 steps:
 - script: echo 'hello'
