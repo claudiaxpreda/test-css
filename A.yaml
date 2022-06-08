@@ -24,10 +24,3 @@ stages:
   - job: BuildJob
     steps:
     - script: echo Building from A test!
-    - 
-- task: AzureSpringCloud@0
-  inputs:
-    azureSubscription: 'azureRMA'
-    Action: 'Set Production'
-    AppName: 
-    UseStagingDeployment: true
