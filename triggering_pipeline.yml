@@ -20,7 +20,7 @@ pool:
 steps:
   - script: 'echo hello word'
   - bash: |
-      az pipelines build tag add --build-id $(Build.BuildId) --tag "Schedule"
+      az pipelines build tag add --build-id $(Build.BuildId) --tag "Schedule" --org https://dev.azure.com/claudiapreda0660/
     displayName: 'Push tag'
     env:
       AZURE_DEVOPS_EXT_PAT: $(System.AccessToken)
