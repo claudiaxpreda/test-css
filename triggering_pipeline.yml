@@ -7,7 +7,7 @@ trigger:
 - none 
 
 schedules:
-- cron: '30 10 * * *' # cron syntax defining a schedule
+- cron: '37 10 * * *' # cron syntax defining a schedule
   displayName: 'Cron Job'# friendly name given to a specific schedule
   branches:
     include: 
