@@ -1,0 +1,26 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- none 
+
+schedules:
+- cron: '50 09 * * *' # cron syntax defining a schedule
+  displayName: 'Cron Job'# friendly name given to a specific schedule
+  branches:
+    include: 
+    - main
+    - dev_update
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - script: 'echo hello word'
+  - bash: |
+      az pipelines build tag add --build-id $(Build.BuildId) --tag "Schedule"
+    displayName: 'Push tag'
+    env:
+      AZURE_DEVOPS_EXT_PAT: $(System.AccessToken)
