@@ -16,10 +16,10 @@ resources:
         - dev_update
       tags:
         - Schedule
-trigger:
-  enabled: false
 
 pr:
+  enabled: false
+trigger:
   enabled: false
 
 pool:
